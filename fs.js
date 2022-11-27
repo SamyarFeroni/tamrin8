@@ -13,10 +13,17 @@ try {
     console.log(error);
 }
 
-fs.readFile('test.json', "utf-8", (err, data) => {
-    if (err) return console.error(err);
-    console.log(data)
-})
+
+
+
+
+
+// let name = 'samyar'
+
+// fs.readFile('test.json', "utf-8", (err, data) => {
+//     if (err) return console.error(err);
+//     console.log(data)
+// })
 
 
 // console.log(1);
