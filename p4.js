@@ -1,3 +1,4 @@
+const { count } = require('console');
 const fs = require('fs');
 
 
@@ -29,14 +30,13 @@ textByline.pop();
   let ID = []
   let number= []
   let idAndNumber = {}
-  function changeType(valeu){
-    return Number(valeu)
-  }
+  let duplicate = {}
   for(let i= 0 ;i<textByline.length;i++){
      //console.log(textByline[i]);
      let IdAndNumber= textByline[i].split("-")
      array.push(IdAndNumber)
      ID.push(array[i][0]);
+  
      
      number.push(array[i][1]);
     
@@ -45,11 +45,12 @@ textByline.pop();
      })
     // console.log(array[i][1]);
   }
-//   ID.map(changeType);
-//   number.map(changeType)
-console.log(ID);
-console.log(number);
-  console.log(idAndNumber);
+  ID.forEach(function(x){duplicate[x] = (duplicate[x] || 0)+1;})
+  
+  console.log(duplicate);
+    console.log(ID);
+    console.log(number);
+    console.log(idAndNumber);
  
  // console.log(array);
 
