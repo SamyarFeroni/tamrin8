@@ -14,8 +14,6 @@ const fs = require('fs');
 
 //         console.log(list);
 //     }})
-
-
 fs.readFile('numbers.txt', 'utf8', function (err, data2) {
 
     let text_ = data2.replace(/(\r)/gm, "");
@@ -24,7 +22,7 @@ fs.readFile('numbers.txt', 'utf8', function (err, data2) {
     textByline.pop();
 
 
-
+// Problem!!!!!!!
     //split the id
     let array = []
     let ID = []
