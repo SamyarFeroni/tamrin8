@@ -15,14 +15,10 @@ const fs = require('fs');
 //         console.log(list);
 //     }})
 fs.readFile('numbers.txt', 'utf8', function (err, data2) {
-
     let text_ = data2.replace(/(\r)/gm, "");
-
     let textByline = text_.split("\n");
     textByline.pop();
-
-
-// Problem!!!!!!!
+    // Problem!!!!!!!
     //split the id
     let array = []
     let ID = []
@@ -41,22 +37,11 @@ fs.readFile('numbers.txt', 'utf8', function (err, data2) {
         // console.log(array[i][1]);
     }
     ID.forEach(function (x) { duplicate[x] = (duplicate[x] || 0) + 1; })
-
     console.log(duplicate);
     console.log(ID);
-    console.log(number);
+    //console.log(number);
+    //=>>>>
     console.log(idAndNumber);
-
     // console.log(array);
 
 });
-
-
-// console.log(text_num);
-// let text_numByLine = text_num.split('\n')
-// console.log(text_numByLine);
-
-
-
-   // console.log(list);
-   // console.log(list2);
