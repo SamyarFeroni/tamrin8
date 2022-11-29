@@ -44,7 +44,19 @@ try {
 
     contacts.push({ contactName: name.name, numbers });
   });
+  for(let i = 0 ;i<contacts.length;i++){
+    if(contacts[i].numbers.length > 1){
+      console.log(contacts[i].contactName +" phone numbers are "+ contacts[i].numbers );
+    };
+    if(contacts[i].numbers.length == 1){
+      console.log(contacts[i].contactName +" phone number is "+ contacts[i].numbers );
+    };
+    if(contacts[i].numbers.length == 0){
+      console.log(contacts[i].contactName +" hasn’t any phone number");
+    };
 
+  }
+console.log(contacts);
   // do the rest...
 } catch (error) {
   console.log(error);
