@@ -1,23 +1,13 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function chek() {
-    const path = "./newfile.txt"
-    console.log(path);
-    if (fs.existsSync(path)) {
-        console.log("exists:", path);
-    } else {
-        console.log("dose not exist:", path);
-    }
+  const path = "./newfile.txt";
+  fs.writeFile(path, "hello world!", (err, data) => {
+    if (err) return console.log("somtehing went wrong");
+    fs.readFile(path, "utf-8", (err, data) => {
+      if (err) return console.log("file not exist");
+      console.log('file exists');
+    });
+  });
 }
-async function Makenewfile(err) {
-    if (err) console.log(err);
-    else {
-        await fs.open('newfile.txt', 'w', function (err) {
-            if (err) console.log(err);
-            console.log('done');
-        })
-    }
-};
 chek();
-Makenewfile();
-chek()
