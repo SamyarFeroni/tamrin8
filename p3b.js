@@ -1,5 +1,4 @@
 const fs = require("fs");
-
 function chek() {
   const path = "./newfile.txt";
   fs.writeFile(path, "hello world!", (err, data) => {

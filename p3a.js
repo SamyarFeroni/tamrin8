@@ -1,5 +1,4 @@
 const fs = require("fs");
-
 function chek() {
   const path = "./newfile3.txt";
   fs.writeFileSync(path, "hello world");
@@ -9,5 +8,4 @@ function chek() {
     console.log("dose not exist:", path);
   }
 }
-
 chek();
